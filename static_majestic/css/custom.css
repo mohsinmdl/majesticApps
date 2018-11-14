@@ -1,0 +1,79 @@
+
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/*submitImage{*/
+/*background: none;*/
+/*color: red;*/
+/*border: none;*/
+/*padding: 0;*/
+/*font: inherit;*/
+/*cursor: pointer;*/
+/*outline: inherit;*/
+
+/*}*/
+
+#arrowIcon {
+
+    width: 120px;
+    height: 70px;
+}
+
+.sectiondiv {
+
+    height: 500px
+
+}
+
+/*Chat CSS*/
+
+.user1 {
+    background: rgba(242, 241, 241, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.user2 {
+    background: rgba(0, 133, 255, 0.9);
+    padding: 40px;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+.messaging {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.message-text {
+    margin-top: 10px;
+}
+
+.message-photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+    display: inline-block;
+}
+
+.message-name {
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.message-box-border {
+
+    padding: 20px;
+    /*border-radius: 5px;*/
+    border: 2px solid #3facc275;
+}

@@ -1,0 +1,86 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+
+    <title>Predictor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static "css/custom.css" %}">
+
+
+</head>
+<body>
+
+<form method='POST' class="form-value-ajax" action='{% url "predict" %}'>
+    {% csrf_token %}
+    <div class="row  justify-content-center">
+
+        {#    User 1 Chat BOX #}
+        <div class=" col-md-5 message-box-border">
+            <h2 class="text-center">Alex</h2>
+            <div class="container">
+
+                <div class="message-box-1 ">
+                </div>
+
+                <div class="messaging center-block ">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" name="user1" class="form-control messageUser1">
+                                <span class="input-group-btn">
+                                <button type="submit" class="btn  btn_send-1" type="button">Send</button>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#    User 2  Chat BOX#}
+        <div class="col-md-5 ml-1 message-box-border ">
+
+            <h2 class="text-center">Bob</h2>
+            <div class="container">
+
+                <div class="message-box-2">
+
+                </div>
+
+                <div class="messaging center-block">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <input type="text" name="user2" class="form-control messageUser2">
+                                <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default btn_send-2">Send</button>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {#        Reset Button; Clear All the messages#}
+        <button class="btn btn-warning col-md-3 mt-2 btn_reset">Reset</button>
+
+
+    </div>
+</form>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+</body>
+<script src="{% static 'js/custom.js' %}"></script>
+</html>
+
+
