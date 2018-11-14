@@ -9,23 +9,25 @@ def chat_home(request):
 
 def predict_input(request):
     # Getting input from from via ajax
+
     user1_input = request.POST.get("user1")
     user2_input = request.POST.get("user2")
 
 
     if(user1_input):
         # if user 1 input field is not none
+
         user1_Value = 1
         toxic =  int(process_comment(user1_input))
-        print("User1")
     else:
         # request is from input field of user 2
+
         user1_Value = 0
         toxic = int(process_comment(user2_input))
-        print("User2")
 
 
     # return data to the ajax via JSON
+
     if request.is_ajax():
         json_data = {
 
